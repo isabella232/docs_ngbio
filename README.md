@@ -1,2 +1,1 @@
-# docs_ngbio
-User documentation for NextGIS Bio
+# User documentation for NextGIS Bio
