@@ -11,5 +11,5 @@ Cодержание:
    :maxdepth: 2
 
    intro
-   quick_tutorial
    general
+   ui
