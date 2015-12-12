@@ -327,15 +327,15 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
+
 latex_documents = [
   (master_doc, 'NextGISBio.tex', u'Документация NextGIS Bio',
-   u'Иван Ковалев \\and Илья Филипов', 'manual', 'true'),
+   u'NextGIS', 'manual', 'true'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-# todo: add NextGIS Bio icon
-# latex_logo = '_static/.png'
+latex_logo = '_static/nextgisbio-logo.png'
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
