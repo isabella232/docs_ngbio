@@ -12,4 +12,5 @@ Cодержание:
 
    intro
    general
+   install
    ui
