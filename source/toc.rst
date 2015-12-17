@@ -8,9 +8,10 @@
 Cодержание:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    intro
    general
    install
+   launch
    ui
