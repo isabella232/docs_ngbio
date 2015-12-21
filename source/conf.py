@@ -41,8 +41,7 @@ extensions = [
     'sphinx.ext.pngmath',
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
-    'sphinxcontrib.httpdomain',
-    'edit_on_github'
+    'sphinxcontrib.httpdomain'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -318,6 +317,7 @@ latex_elements = {
 \DeclareUnicodeCharacter{2191}{\ensuremath{\uparrow}}
 \DeclareUnicodeCharacter{2192}{\ensuremath{\rightarrow}}
 \DeclareUnicodeCharacter{2193}{\ensuremath{\downarrow}}
+\DeclareUnicodeCharacter{2103}{\textdegree}
 ''',
 
 # Latex figure (float) alignment
