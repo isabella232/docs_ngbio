@@ -104,10 +104,10 @@ postgresql-{version}-postgis-{version} и установите его:
 .. code:: bash
 
     sudo apt-get install postgresql-9.3-postgis-2.1
-    sudo -u postgres psql -d db_ngw -c 'CREATE EXTENSION postgis;'
-    sudo -u postgres psql -d db_ngw -c 'ALTER TABLE geometry_columns OWNER TO ngw_admin;'
-    sudo -u postgres psql -d db_ngw -c 'ALTER TABLE spatial_ref_sys OWNER TO ngw_admin;'
-    sudo -u postgres psql -d db_ngw -c 'ALTER TABLE geography_columns OWNER TO ngw_admin;'
+    sudo -u postgres psql -d db_ngbio -c 'CREATE EXTENSION postgis;'
+    sudo -u postgres psql -d db_ngbio -c 'ALTER TABLE geometry_columns OWNER TO ngbio_admin;'
+    sudo -u postgres psql -d db_ngbio -c 'ALTER TABLE spatial_ref_sys OWNER TO ngbio_admin;'
+    sudo -u postgres psql -d db_ngbio -c 'ALTER TABLE geography_columns OWNER TO ngbio_admin;'
 
 После этих операций будут созданы БД PostgreSQL с установленным в ней
 :term:`PostGIS` и пользователь :abbr:`БД (база данных)`, который станет ее владельцем, а также 
@@ -117,7 +117,7 @@ postgresql-{version}-postgis-{version} и установите его:
 
 .. code:: bash
 
-    psql -d db_ngw -U ngw_admin -c "SELECT PostGIS_Full_Version();"
+    psql -d db_ngw -U ngbio_admin -c "SELECT PostGIS_Full_Version();"
 
 Если вы разворачиваете систему на чистом сервере, и вам надо сделать ещё
 одну базу PostGIS для хранения данных, то включаем доступ к ней из сети
