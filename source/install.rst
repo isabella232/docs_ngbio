@@ -117,7 +117,7 @@ postgresql-{version}-postgis-{version} и установите его:
 
 .. code:: bash
 
-    psql -d db_ngw -U ngbio_admin -c "SELECT PostGIS_Full_Version();"
+    psql -d db_ngbio -U ngbio_admin -c "SELECT PostGIS_Full_Version();"
 
 Если вы разворачиваете систему на чистом сервере, и вам надо сделать ещё
 одну базу PostGIS для хранения данных, то включаем доступ к ней из сети
@@ -187,7 +187,7 @@ postgresql-{version}-postgis-{version} и установите его:
 .. code:: bash
 
     mkdir -p ~/ngbio
-    cd ~/ngw
+    cd ~/ngbio
 
 Клонируем репозиторий:
 

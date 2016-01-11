@@ -83,13 +83,13 @@ wrapper, так как он иногда работает некорректно
     
     [uwsgi]
     home = /home/ngbio/ngbio/env
-    socket = /home/ngbio/uwsgi/ngw
+    socket = /home/ngbio/uwsgi/ngbio
     protocol=uwsgi
     chmod-socket=777
     master = true
     processes = 8
     threads = 4
-    logto = /home/ngbio/logs/ngw.log
+    logto = /home/ngbio/logs/ngbio.log
     log-slow = 1000
     paste = config:%p
     paste-logger = %p
