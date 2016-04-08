@@ -60,7 +60,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Документация NextGIS Bio'
-copyright = u'2015, NextGIS'
+copyright = u'2015-2016, NextGIS'
 author = u'Илья Филипов, Иван Ковалев'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -330,7 +330,7 @@ latex_elements = {
 
 latex_documents = [
   (master_doc, 'NextGISBio.tex', u'Документация NextGIS Bio',
-   u'NextGIS', 'manual', 'true'),
+   author, 'manual', 'true'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
