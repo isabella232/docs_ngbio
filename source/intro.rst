@@ -1,6 +1,6 @@
 .. sectionauthor:: Иван Ковалев <ivan.kovalev@nextgis.ru>
 
-.. _intro:
+.. _ngb_intro:
 
 Введение
 ========
