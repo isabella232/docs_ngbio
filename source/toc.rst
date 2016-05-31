@@ -2,7 +2,7 @@
 .. sectionauthor:: Илья Филипов <artem.svetlov@nextgis.ru>
 .. NextGIS Bio TOC
 
-NextGIS Bio documentation
+Документация NextGIS Bio
 ==========================
 
 Cодержание:
