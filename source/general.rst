@@ -28,10 +28,10 @@
 Программная архитектура NextGIS Bio
 -----------------------------------
 
-С точки зрения программной архтектуры NextGIS Bio состоит из серверной и клиентской части. Схематически архитектурные компоненты системы можно изобразить в виде блок-схемы, приведенной на :numref:`common_arch`
+С точки зрения программной архтектуры NextGIS Bio состоит из серверной и клиентской части. Схематически архитектурные компоненты системы можно изобразить в виде блок-схемы, приведенной на :numref:`ngbio_common_arch`
 
 .. figure:: _static/common_arch.png
-   :name: common_arch
+   :name: ngbio_common_arch
    :align: center
 
    Архитектура NextGIS Bio.
@@ -47,10 +47,10 @@
 
 NextGIS Bio работает во всех современных браузерах.
 Внешний вид пользовательского интерфейса с опубликованной веб-картой представлен 
-на :numref:`img_bio_common`.
+на :numref:`ngbio_img_bio_common`.
 
 .. figure:: _static/bio_common.png
-   :name: img_bio_common
+   :name: ngbio_img_bio_common
    :align: center
 
    Пользовательский интерфейс главной страницы NextGIS Bio.
