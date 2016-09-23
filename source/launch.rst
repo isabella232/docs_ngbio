@@ -26,7 +26,7 @@
 
 .. code:: bash
 
-    {ABSOLUTE_PATH_TO_ENV}/env/bin/pserve --daemon  /home/zadmin/ngw/production.ini
+    {ABSOLUTE_PATH_TO_ENV}/env/bin/pserve --daemon  /home/zadmin/ngw/production.ini ,
 
 где {ABSOLUTE_PATH_TO_ENV} - составляющая абсолютного пути до вашего виртуального окружения.
 
@@ -40,7 +40,7 @@
 
 Должно открыться окно авторизации.
 
-.. note: При запуске pserve через supervisor необходимо добавить настройку environment=LANG=ru_RU.UTF-8 для поддержки русскихимен в названии загружаемых файлов.
+.. note: При запуске pserve через supervisor необходимо добавить настройку environment=LANG=ru_RU.UTF-8 для поддержки русских имен в названии загружаемых файлов.
 
 .. _ngb_uwsgi:
 
@@ -97,7 +97,7 @@ wrapper, так как он иногда работает некорректно
 
 .. note:: 
    Соответсвующие папки должны быть созданы. Для работы локали 
-   (LANG=ru_RU.UTF-8) необходимо что бы в системе имелись соответсвующие файлы 
+   (LANG=ru_RU.UTF-8) необходимо, чтобы в системе имелись соответсвующие файлы 
    (locale -a). Если локали нет, то ее необходимо добавить (locale-gen 
    ru_RU.utf8). Так же рекомендуется установить локаль системной (update-locale 
    LANG=ru_RU.UTF-8).
@@ -127,7 +127,7 @@ FastCGI:
     socket = host:port | :port | /path/to/socket
     protocol = fastcgi
 
-Знака \| в конфиге быть не должно, надо написать например так:
+Знака \| в конфиге быть не должно, должно быть написано, например так:
 
 ::
 
