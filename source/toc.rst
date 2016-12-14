@@ -1,5 +1,4 @@
-.. sectionauthor:: Иван Ковалев <ivan.kovalev@nextgis.ru>
-.. sectionauthor:: Илья Филипов <artem.svetlov@nextgis.ru>
+.. sectionauthor:: NextGIS
 .. NextGIS Bio TOC
 
 Документация NextGIS Bio
@@ -8,7 +7,8 @@
 Cодержание:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
+   :numbered:
 
    intro
    general
