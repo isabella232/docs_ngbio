@@ -7,8 +7,7 @@
 Cодержание:
 
 .. toctree::
-   :maxdepth: 4
-   :numbered:
+   :maxdepth: 2
 
    intro
    general
