@@ -60,7 +60,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Документация NextGIS Bio'
-copyright = u'2015-2016, NextGIS'
+copyright = u'2015-2017, NextGIS'
 author = u'Илья Филипов, Иван Ковалев'
 
 # The version info for the project you're documenting, acts as replacement for
