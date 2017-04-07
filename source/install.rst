@@ -48,14 +48,14 @@ Server > 12.04).
 
 **Для ubuntu server 12.04**
 
-.. code:: bash
+.. code-block:: bash
 
     sudo apt-get install software-properties-common python-software-properties
     sudo apt-add-repository ppa:ubuntugis/ppa
 
 **Для ubuntu server 14.04**
 
-.. code:: bash
+.. code-block:: bash
 
     sudo apt-add-repository ppa:ubuntugis/ubuntugis-unstable
     sudo apt-get update
@@ -63,13 +63,13 @@ Server > 12.04).
 
 Установить PostgreSQL:
 
-.. code:: bash
+.. code-block:: bash
 
     sudo apt-get install postgresql
 
 Создаем пользователя:
 
-.. code:: bash
+.. code-block:: bash
 
     sudo -u postgres createuser ngbio_admin -P -e
 
@@ -77,7 +77,7 @@ Server > 12.04).
 
 Создаем базу, в которую будет развернута NextGIS Bio:
 
-.. code:: bash
+.. code-block:: bash
 
     sudo -u postgres createdb -O ngbio_admin --encoding=UTF8 db_ngbio
     sudo nano /etc/postgresql/9.3/main/pg_hba.conf
@@ -87,13 +87,13 @@ Server > 12.04).
 
 Не забудьте перезапустить сервис базы:
 
-.. code:: bash
+.. code-block:: bash
 
     sudo service postgresql restart
 
 Установить PostGIS:
 
-.. code:: bash
+.. code-block:: bash
 
     sudo apt-cache search postgis
 
@@ -101,7 +101,7 @@ Server > 12.04).
 PostgreSQL, его имя должно иметь вид
 postgresql-{version}-postgis-{version} и установите его:
 
-.. code:: bash
+.. code-block:: bash
 
     sudo apt-get install postgresql-9.3-postgis-2.1
     sudo -u postgres psql -d db_ngbio -c 'CREATE EXTENSION postgis;'
@@ -115,14 +115,14 @@ postgresql-{version}-postgis-{version} и установите его:
 
 Убедитесь, что функции PostGIS появились в базе:
 
-.. code:: bash
+.. code-block:: bash
 
     psql -d db_ngbio -U ngbio_admin -c "SELECT PostGIS_Full_Version();"
 
 Если вы разворачиваете систему на чистом сервере, и вам надо сделать ещё
 одну базу PostGIS для хранения данных, то включаем доступ к ней из сети
 
-.. code:: bash
+.. code-block:: bash
 
     sudo su - postgres
     nano /etc/postgresql/9.3/main/pg_hba.conf
@@ -131,7 +131,7 @@ postgresql-{version}-postgis-{version} и установите его:
     nano /etc/postgresql/9.3/main/postgresql.conf
     делаем строку listen_addresses='*', и расскоментируем её.
 
-.. code:: bash
+.. code-block:: bash
 
     sudo service postgresql restart
 
@@ -140,19 +140,19 @@ postgresql-{version}-postgis-{version} и установите его:
 
 Установить pip:
 
-.. code:: bash
+.. code-block:: bash
 
     sudo apt-get install python-pip
 
 Установить virtualenv:
 
-.. code:: bash
+.. code-block:: bash
 
     sudo pip install virtualenv
 
 Установить дополнительные инструменты:
 
-.. code:: bash
+.. code-block:: bash
 
     sudo apt-get install python-mapscript git libgdal-dev python-dev g++ \
     libxml2-dev libxslt1-dev gdal-bin \
@@ -168,7 +168,7 @@ postgresql-{version}-postgis-{version} и установите его:
 Генерируем ключи для работы с GitHub (копируем и вставляем ключ в
 настройки пользователя GitHub в `разделе SSH keys <https://github.com/settings/ssh>`_):
 
-.. code:: bash
+.. code-block:: bash
 
     mkdir ~/.ssh
     cd ~/.ssh
@@ -188,21 +188,21 @@ postgresql-{version}-postgis-{version} и установите его:
 
 Создаём необходимые директории:
 
-.. code:: bash
+.. code-block:: bash
 
     mkdir -p ~/ngbio
     cd ~/ngbio
 
 Клонируем репозиторий:
 
-.. code:: bash
+.. code-block:: bash
 
     git clone https://github.com/nextgis/nextgisbio.git
 
 Создаем виртуальное окружение virtualenv в папке ``~/ngbio/env`` (папка
 создастся сама после выполнения команды):
 
-.. code:: bash
+.. code-block:: bash
 
     virtualenv --no-site-packages env
 
@@ -212,7 +212,7 @@ postgresql-{version}-postgis-{version} и установите его:
 Устанавливаем пакет NextGIS Bio в режиме разработки, при этом будут
 установлены все необходимые пакеты:
 
-.. code:: bash
+.. code-block:: bash
 
     env/bin/pip install -e ./nextgisbio
 
@@ -224,7 +224,7 @@ postgresql-{version}-postgis-{version} и установите его:
 текстовый файл нужно внести изменения в соответствии со своим
 окружением. Основное изменение касается строки подключения к базе данных:
 
-.. code:: python
+.. code-block:: python
 
     sqlalchemy.url = postgresql+psycopg2://{USER_NAME}:{USER_PASSWORD}@0.0.0.0/{DATABASE_NAME}
 
@@ -236,7 +236,7 @@ postgresql-{version}-postgis-{version} и установите его:
 
 Инициализация БД выполняется следующим образом:
 
-.. code:: bash
+.. code-block:: bash
 
     env/bin/initialize_ngbio_db development.ini
 
@@ -247,20 +247,20 @@ postgresql-{version}-postgis-{version} и установите его:
 
 Для обновления NextGIS Bio необходимо выполнить команду:
 
-.. code:: bash
+.. code-block:: bash
 
     cd ~/ngbio/nextgisbio
     git pull
 
 Если в файле setup.py добавились зависимости, то следует выполнить:
 
-.. code:: bash
+.. code-block:: bash
 
     env/bin/pip install -e ./nextgisbio
 
 Если изменилась структура БД то следует выполнить:
 
-.. code:: bash
+.. code-block:: bash
 
     # Внимание! Существующие таблицы удалятся!
     env/bin/initialize_ngbio_db development.ini

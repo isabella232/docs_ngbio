@@ -11,20 +11,20 @@
 
 Для запуска NextGIS Bio через Pserve необходимо выполнить команду:
 
-.. code:: bash
+.. code-block:: bash
 
     env/bin/pserve development.ini
 
 Для автоматического запуска NextGIS Bio при загрузке операционной системы
 необходимо отредактировать пользовательский скрипт автозапуска:
 
-.. code:: bash
+.. code-block:: bash
 
     sudo nano /etc/rc.local
 
 и добавить в него строку:
 
-.. code:: bash
+.. code-block:: bash
 
     {ABSOLUTE_PATH_TO_ENV}/env/bin/pserve --daemon  /home/zadmin/ngw/production.ini ,
 
@@ -49,14 +49,14 @@
 
 Для начал необходимо установить uWSGI:
 
-.. code:: bash
+.. code-block:: bash
 
    user@ubuntu:~/ngw$ source env/bin/activate
    (env)user@ubuntu:~/ngw$ pip install uwsgi
     
 или через системный сервис:
 
-.. code:: bash
+.. code-block:: bash
 
    apt-get install uwsgi uwsgi-plugin-python uwsgi-emperor
  
